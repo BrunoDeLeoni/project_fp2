@@ -1,0 +1,13 @@
+.root {
+    background-color: grey;
+}
+.header {
+    background-color: red;
+}
+.link {
+    padding: 10px;
+    text-decoration: none;
+}
+.footer {
+    background-color: green;
+}
