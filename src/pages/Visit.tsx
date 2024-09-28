@@ -1,12 +1,12 @@
 import React from "react";
 
-function Home() {
+function Visit() {
     
     return (
         <div>
-            <h4>webHome</h4>
+            <h4>Visit</h4>
         </div>
     );
 }
 
-export { Home };
+export { Visit };

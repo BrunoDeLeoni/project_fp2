@@ -1,12 +1,12 @@
 import React from "react";
 
-function Home() {
+function Dashboard() {
     
     return (
         <div>
-            <h4>webHome</h4>
+            <h4>webDashboard</h4>
         </div>
     );
 }
 
-export { Home };
+export { Dashboard };
