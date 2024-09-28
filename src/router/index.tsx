@@ -16,14 +16,12 @@ function AppRouters() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/dashboard" element={<Dashboard />}>
-                    <Route path="/user" element={<User />}>
-                        <Route path="/user/update" element={<UserUpdate />} />
-                    </Route>
-                    <Route path="/report" element={<Report />}>
-                        <Route path="/report/new" element={<ReportNew />} />
-                        <Route path="/report/info" element={<ReportInfo />} />
-                        <Route path="/report/all" element={<ReportAll />} />
-                    </Route>
+                    <Route path="user" element={<User />} />
+                    <Route path="update" element={<UserUpdate />} />
+                    <Route path="report" element={<Report />} />
+                    <Route path="new" element={<ReportNew />} />
+                    <Route path="info" element={<ReportInfo />} />
+                    <Route path="all" element={<ReportAll />} />
                 </Route>
                 <Route path="/visit" element={<Visit />} />
             </Route>

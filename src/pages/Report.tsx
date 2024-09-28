@@ -1,10 +1,15 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
 export function Report() {
     
     return (
         <div>
             <h4>webReport</h4>
+            <Link to="/dashboard/new">New</Link>
+            <Link to="/dashboard/info">More info...</Link>
+            <Link to="/dashboard/all">All</Link>
+            <Outlet/>
         </div>
     );
 }
