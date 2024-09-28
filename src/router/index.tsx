@@ -24,6 +24,7 @@ function AppRouters() {
                     <Route path="all" element={<ReportAll />} />
                 </Route>
                 <Route path="/visit" element={<Visit />} />
+                <Route path="*" element={<Visit />} />
             </Route>
         </Routes>
     );
