@@ -1,6 +1,10 @@
 import React from "react";
 import * as css from "./index.css";
 
-export function MainButton({ children }) {
-    return <button className={css.root}>{children}</button>;
+export function Button_Main({ text }) {
+    return (
+        <label className={css.root}>
+            <button className={css.title}>{text}</button>
+        </label>
+    );
 }

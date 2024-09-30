@@ -1,8 +1,9 @@
 import React from "react";
+import * as css from "./header.css"
 
 function Header() {
     return (
-        <div>
+        <div className={css.root}>
             <header>Header</header>
         </div>
     );

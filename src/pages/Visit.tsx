@@ -1,12 +1,6 @@
 import React from "react";
+import { VisitItems } from "../components/visit/Visit";
 
-function Visit() {
-    
-    return (
-        <div>
-            <h4>Visit</h4>
-        </div>
-    );
+export function Visit() {
+    return <div>{VisitItems()}</div>;
 }
-
-export { Visit };

@@ -1,5 +1,14 @@
 .root{
+    margin: 0px 0px;
+    width: 100%;
+    text-align: center;
+}
+.title{
+    margin: 5px 5px;
+    padding: 10px 10px;
     border: none;
-    padding: 10px;
-    background: aliceblue;
+    width: 30%;
+    min-width: 100px;
+    font-size: 15px;
+    font-family: monospace;
 }

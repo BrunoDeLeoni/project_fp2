@@ -1,13 +1,6 @@
-.root {
-    background-color: grey;
+.root{
+    min-height: 100vh;
 }
-.header {
-    background-color: red;
-}
-.link {
-    padding: 10px;
-    text-decoration: none;
-}
-.footer {
-    background-color: green;
+.outlet{
+    min-height: 90vh;
 }

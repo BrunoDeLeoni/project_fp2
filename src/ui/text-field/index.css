@@ -1,6 +1,22 @@
-.root{
+.root {
     padding: 10px;
-    border: none;
-    margin: 5px;
-    background: aliceblue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.title {
+    margin: 0px 0px;
+    text-align: center;
+    font-size: 17px;
+    font-family: monospace;
+}
+.input {
+    margin: 0px 0px;
+    text-align: center;
+    font-size: 15px;
+    font-family: monospace;
+    width: 75%;
+    max-width: 350px;
 }

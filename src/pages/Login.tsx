@@ -1,21 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { LoginForm } from "../components/login/Login";
+import { RegisterForm } from "../components/register/Register";
 
 export function Login() {
-    
-    return (
-        <div>
-            <h4>webLogin</h4>
-            <Link to="/dashboard">Log In</Link>
-        </div>
-    );
+    return <div>{LoginForm()}</div>;
 }
 
 export function Register() {
-    
-    return (
-        <div>
-            <h4>webRegister</h4>
-        </div>
-    );
+    return <div>{RegisterForm()}</div>;
 }
