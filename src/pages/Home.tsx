@@ -1,15 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HomeComponent } from "../components/home/Home";
 
-function Home() {
-    return (
-        <div>
-            <h4>webHome</h4>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/visit">Visit</Link>
-        </div>
-    );
+export function Home() {
+    return <div>{HomeComponent()}</div>;
 }
-
-export { Home };

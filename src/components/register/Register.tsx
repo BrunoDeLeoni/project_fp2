@@ -21,7 +21,7 @@ function RegisterForm() {
         };
         return useRegister(data)
             ? navigate("/login", { replace: true })
-            : alert("Contraseña Incorrecta");
+            : alert("Registro Error");
     }
 
     return (

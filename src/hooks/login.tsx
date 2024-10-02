@@ -13,6 +13,5 @@ function checkToken(data) {
 
 function checkUser(token) {
     const api = test_api_id(token);
-    console.log(api);
     return api ? true : false;
 }

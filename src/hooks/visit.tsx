@@ -5,19 +5,12 @@ import { test_api_visit } from "../lib/test_api";
 import { useEffect } from "react";
 import { atom, selector, useRecoilValue, useSetRecoilState } from "recoil";
 
-/* 
-export function useVisit() {
-    const api = test_api_visit();
-    return api;
-} 
-*/
-
-export const visitState = atom({
+const visitState = atom({
     key: "visitState",
     default: "",
 });
 
-export const visitResults = selector({
+const visitResults = selector({
     key: "visitResults",
     get: ({ get }) => {
         return test_api_visit();

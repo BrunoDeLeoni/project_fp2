@@ -65,7 +65,11 @@ function test_api_user(id) {
 }
 
 export function test_api_register(data) {
-    return true;
+    if (data) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 export function test_api_visit() {
