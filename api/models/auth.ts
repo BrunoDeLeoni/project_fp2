@@ -14,5 +14,3 @@ Auth.init(
         modelName: "Auth",
     }
 );
-
-// export { Auth };

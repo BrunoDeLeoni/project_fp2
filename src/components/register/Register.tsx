@@ -11,13 +11,11 @@ function RegisterForm() {
     function handleSubmit(e) {
         e.preventDefault();
         const data = {
-            user: e.target.user.value,
-            password: e.target.password.value,
-            password_check: e.target.password_check.value,
-            name: e.target.name.value,
-            lastname: e.target.lastname.value,
-            email: e.target.email.value,
-            phone: e.target.phone.value,
+            username: e.target.username.value,
+            userPassword: e.target.userPassword.value,
+            userPassword_check: e.target.userPassword_check.value,
+            userFullname: e.target.userFullname.value,
+            userEmail: e.target.userEmail.value,
         };
         return useRegister(data)
             ? navigate("/login", { replace: true })
@@ -26,13 +24,11 @@ function RegisterForm() {
 
     return (
         <form className={css.root} onSubmit={handleSubmit}>
-            <TextField_Register text="Usuario" name="user" type="text" />
-            <TextField_Register text="Contraseña" name="password" type="password" />
-            <TextField_Register text="Confirma la Contraseña" name="password_check" type="password" />
-            <TextField_Register text="Nombre" name="name" type="text" />
-            <TextField_Register text="Apellido" name="lastname" type="text" />
-            <TextField_Register text="Email" name="email" type="email" />
-            <TextField_Register text="Telefono" name="phone" type="number" />
+            <TextField_Register text="Usuario" name="username" type="text" />
+            <TextField_Register text="Contraseña" name="userPassword" type="password" />
+            <TextField_Register text="Confirma la Contraseña" name="userPassword_check" type="password" />
+            <TextField_Register text="Nombre" name="userFullname" type="text" />
+            <TextField_Register text="Email" name="userEmail" type="email" />
             <Button_Main text="Registrarse" />
         </form>
     );

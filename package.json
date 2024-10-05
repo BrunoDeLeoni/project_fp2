@@ -6,7 +6,7 @@
     "dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack",
     "start": "live-server",
-    "api": "ts-node ./api/dev.ts",
+    "api": "nodemon --watch './api/index.ts' --exec 'ts-node ./api/dev.ts'",
     "sync": "ts-node ./api/dev-sync.ts"
   },
   "keywords": [],
@@ -30,6 +30,7 @@
     "live-server": "^1.2.2",
     "lodash": "^4.17.21",
     "mapbox-gl": "^3.7.0",
+    "nodemon": "^3.1.7",
     "pg": "^8.13.0",
     "pg-hstore": "^2.3.4",
     "react": "^18.3.1",

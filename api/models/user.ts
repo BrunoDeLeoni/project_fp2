@@ -15,5 +15,3 @@ User.init(
         modelName: "User",
     }
 );
-
-// export { User };

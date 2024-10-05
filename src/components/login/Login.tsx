@@ -11,18 +11,26 @@ function LoginForm() {
     function handleSubmit(e) {
         e.preventDefault();
         const data = {
-            user: e.target.user.value,
-            password: e.target.password.value,
+            username: e.target.username.value,
+            userPassword: e.target.userPassword.value,
         };
-        return useLogin(data)
-            ? navigate("/dashboard", { replace: true })
-            : alert("Usuario/Contraseña Incorrectas");
+
+        const x = useLogin(data);
+        // console.log(x);
+
+        // return useLogin(data)
+        //     ? navigate("/dashboard", { replace: true })
+        //     : alert("Usuario/Contraseña Incorrectas");
     }
 
     return (
         <form className={css.root} onSubmit={handleSubmit}>
-            <TextField_Login text="Username" name="user" type="user" />
-            <TextField_Login text="Password" name="password" type="password" />
+            <TextField_Login text="Username" name="username" type="user" />
+            <TextField_Login
+                text="Password"
+                name="userPassword"
+                type="password"
+            />
             <Button_Main text="Login" />
         </form>
     );

@@ -2,8 +2,8 @@
 import {
     userCreate,
     userAuth,
-    // userData,
-    // userUpdate,
+    userData,
+    userUpdate,
 } from "./controllers/user-controllers";
 // import { petCreate, petVisit, petMyReports, petReported, changeSearch } from "./controllers/pet-controllers";
 // import { petMyReportsInfo, petReportedInfo, petReportedInfoAdd, petMyReportsInfoAdd, sendEmail } from "./controllers/info-controllers";
@@ -86,37 +86,35 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// /* User: Data del usuario logueado */
-// app.get("/me", authMiddleware, async (req, res) => {
-//     if(!req.body){
-//         res.status(400).json({
-//             message: "Not Data"
-//         })
-//     }
-//     const response = await userData(req._user.id)
-//     try{
-//         res.json(response)
-//     }
-//     catch (e){
-//         res.status(401).json({ error: e})
-//     }
-// });
+/* User: Data del usuario logueado */
+app.get("/me", authMiddleware, async (req, res) => {
+    if (!req.body) {
+        res.status(400).json({
+            message: "Not Data",
+        });
+    }
+    const response = await userData(req._user.id);
+    try {
+        res.json(response);
+    } catch (e) {
+        res.status(401).json({ error: e });
+    }
+});
 
-// /* User: Actualizar el usuario logueado */
-// app.put("/me", authMiddleware, async (req, res) => {
-//     if(!req.body){
-//         res.status(400).json({
-//             message: "Not Data"
-//         })
-//     }
-//     const response = await userUpdate(req._user.id, req.body)
-//     try{
-//         res.json(response)
-//     }
-//     catch (e){
-//         res.status(401).json({ error: e})
-//     }
-// });
+/* User: Actualizar el usuario logueado */
+app.put("/me", authMiddleware, async (req, res) => {
+    if (!req.body) {
+        res.status(400).json({
+            message: "Not Data",
+        });
+    }
+    const response = await userUpdate(req._user.id, req.body);
+    try {
+        res.json(response);
+    } catch (e) {
+        res.status(401).json({ error: e });
+    }
+});
 
 // /* Pet: Crear una nueva mascota perdida */
 // app.post("/new-pet", authMiddleware, async (req, res) => {

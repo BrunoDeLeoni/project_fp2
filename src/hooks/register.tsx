@@ -1,12 +1,7 @@
 /* Funciones del Resgistro */
 
-import { test_api_register } from "../lib/test_api";
+import { newUser } from "../lib/api";
 
 export function useRegister(data) {
-    return data.password === data.password_check ? useNewRegister(data) : false;
-}
-
-function useNewRegister(data) {
-    const api = test_api_register(data);
-    return api;
+    return data.userPassword === data.userPassword_check ? newUser(data) : false;
 }

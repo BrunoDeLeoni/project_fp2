@@ -65,30 +65,30 @@ export async function userData(userId) {
     return data;
 }
 
-// /* User: Verifica que datos voy a modificar */
-// function cleanUpdate(data) {
-//     const { userFullname, userEmail } = data;
-//     if (userFullname && userEmail) {
-//         return { userFullname, userEmail };
-//     }
-//     if (userFullname) {
-//         return { userFullname };
-//     }
-//     if (userEmail) {
-//         return { userEmail };
-//     }
-// }
+/* User: Verifica que datos voy a modificar */
+function cleanUpdate(data) {
+    const { userFullname, userEmail } = data;
+    if (userFullname && userEmail) {
+        return { userFullname, userEmail };
+    }
+    if (userFullname) {
+        return { userFullname };
+    }
+    if (userEmail) {
+        return { userEmail };
+    }
+}
 
-// /* User: Actualizo mis datos */
-// export async function userUpdate(userId, data){
-//     const { userFullname, userEmail } = cleanUpdate(data)
-//     const userUpdate = await User.update({
-//         userFullname,
-//         userEmail
-//     }, {
-//         where: {
-//             id: userId
-//         }
-//     });
-//     return userUpdate
-// }
+/* User: Actualizo mis datos */
+export async function userUpdate(userId, data){
+    const { userFullname, userEmail } = cleanUpdate(data)
+    const userUpdate = await User.update({
+        userFullname,
+        userEmail
+    }, {
+        where: {
+            id: userId
+        }
+    });
+    return userUpdate
+}
