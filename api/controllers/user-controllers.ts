@@ -12,7 +12,6 @@ export function getSHA256ofJSON(pass: string) {
 export async function userCreate(data) {
     const { username, userFullname, userEmail } = data;
     const { userPassword } = data;
-    console.log("test_1");
     const [userNew, userNewCreate] = await User.findOrCreate({
         where: {
             username,
@@ -22,7 +21,6 @@ export async function userCreate(data) {
             userEmail,
         },
     });
-    console.log("test_2");
     const [authNew, authNewCreate] = await Auth.findOrCreate({
         where: {
             UserId: userNew.get("id"),
@@ -32,8 +30,6 @@ export async function userCreate(data) {
             userPassword: getSHA256ofJSON(userPassword),
         },
     });
-    console.log("test_3");
-
     return userNewCreate;
 }
 

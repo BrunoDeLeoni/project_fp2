@@ -8,19 +8,15 @@ import * as css from "./login.css";
 function LoginForm() {
     const navigate = useNavigate();
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const data = {
             username: e.target.username.value,
             userPassword: e.target.userPassword.value,
         };
-
-        const x = useLogin(data);
-        // console.log(x);
-
-        // return useLogin(data)
-        //     ? navigate("/dashboard", { replace: true })
-        //     : alert("Usuario/Contraseña Incorrectas");
+        return await useLogin(data)
+            ? navigate("/dashboard", { replace: true })
+            : alert("ERR_Login");
     }
 
     return (

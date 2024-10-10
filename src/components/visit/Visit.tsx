@@ -8,9 +8,9 @@ function VisitItems() {
     console.log(item);
     return (
         <div className={css.root}>
-            {item.map((r) => (
+            {/* {item.map((r) => (
                 <ItemVisit item={r}></ItemVisit>
-            ))}
+            ))} */}
         </div>
     );
 }

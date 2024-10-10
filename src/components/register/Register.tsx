@@ -8,7 +8,7 @@ import * as css from "./register.css";
 function RegisterForm() {
     const navigate = useNavigate();
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const data = {
             username: e.target.username.value,
@@ -17,9 +17,9 @@ function RegisterForm() {
             userFullname: e.target.userFullname.value,
             userEmail: e.target.userEmail.value,
         };
-        return useRegister(data)
+        return (await useRegister(data))
             ? navigate("/login", { replace: true })
-            : alert("Registro Error");
+            : alert("ERR_Registro");
     }
 
     return (
